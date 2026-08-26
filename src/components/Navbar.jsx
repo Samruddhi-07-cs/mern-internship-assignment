@@ -9,7 +9,7 @@ const links = [
   { label: 'Contact', href: '#contact' },
 ]
 
-function Navbar() {
+function Navbar({ totalQuantity, isOrderOpen, onOrderToggle }) {
   const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
@@ -49,9 +49,9 @@ function Navbar() {
               <a className={link.href === '#home' ? 'is-active' : ''} key={link.href} href={link.href} onClick={closeMenu} aria-current={link.href === '#home' ? 'page' : undefined}>{link.label}</a>
             ))}
           </div>
-          <a className="nav-order" href="https://wa.me/919876543210" target="_blank" rel="noreferrer" onClick={closeMenu}>
-            <span aria-hidden="true">↗</span> Order now
-          </a>
+          <button className="order-toggle navbar-order-toggle" type="button" aria-expanded={isOrderOpen} aria-controls="order-panel" onClick={onOrderToggle}>
+            <span aria-hidden="true">◌</span> Order <strong>({totalQuantity})</strong>
+          </button>
         </div>
       </nav>
     </header>

@@ -39,8 +39,8 @@ function App() {
 
   return (
     <>
-      <Navbar />
-      <OrderPanel cart={cart} totalQuantity={totalQuantity} isOpen={isOrderOpen} onToggle={() => setIsOrderOpen((open) => !open)} onIncrease={(item) => updateQuantity(item, 1)} onDecrease={(id) => updateQuantity({ id }, -1)} onPlaceOrder={() => { setOrderMessage('Your order has been prepared successfully.'); setCart([]) }} />
+      <Navbar totalQuantity={totalQuantity} isOrderOpen={isOrderOpen} onOrderToggle={() => setIsOrderOpen((open) => !open)} />
+      <OrderPanel showToggle={false} cart={cart} totalQuantity={totalQuantity} isOpen={isOrderOpen} onToggle={() => setIsOrderOpen((open) => !open)} onIncrease={(item) => updateQuantity(item, 1)} onDecrease={(id) => updateQuantity({ id }, -1)} onPlaceOrder={() => { setOrderMessage('Your order has been prepared successfully.'); setCart([]) }} />
       <main>
         <Hero />
         <Reveal><Specialities onAddToOrder={handleAddToOrder} /></Reveal>
