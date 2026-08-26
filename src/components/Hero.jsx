@@ -58,7 +58,7 @@ function Hero() {
 
         <div className="hero-visual">
           <div className="hero-image-frame">
-            {heroSlides.map((item, index) => <img className={`hero-foreground-slide${index === currentSlide ? ' is-active' : ''}`} key={item.foreground} src={item.foreground} alt={index === currentSlide ? item.alt : ''} aria-hidden={index !== currentSlide} />)}
+            {heroSlides.map((item, index) => <img className={`hero-foreground-slide${index === currentSlide ? ' is-active' : ''}`} key={item.label} src={item.foreground} alt={index === currentSlide ? item.alt : ''} aria-hidden={index !== currentSlide} />)}
           </div>
           <div className="hero-stamp" aria-hidden="true"><span>100%</span><small>Ghar jaisi<br />chav</small></div>
           <div className="hero-caption"><span /> {slide.label}</div>

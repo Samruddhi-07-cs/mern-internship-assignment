@@ -1,4 +1,4 @@
-function MenuCard({ item }) {
+function MenuCard({ item, onAddToOrder }) {
   return (
     <article className="menu-card">
       <div className="menu-card-image">
@@ -15,7 +15,7 @@ function MenuCard({ item }) {
           <strong>₹{item.price}</strong>
         </div>
         <p className="menu-description">{item.description}</p>
-        <button className="add-button" type="button" aria-label={`Add ${item.englishName} to order`}>
+        <button className="add-button" type="button" aria-label={`Add ${item.englishName} to order`} onClick={() => onAddToOrder(item)}>
           <span aria-hidden="true">+</span> Add to order
         </button>
       </div>

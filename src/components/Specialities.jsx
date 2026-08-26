@@ -9,7 +9,7 @@ const specialityFoodImages = [
   { image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=400&q=70', position: 'food-section-right', size: '130px', shape: 'food-circle', opacity: .1, rotation: 12 },
 ]
 
-function Specialities() {
+function Specialities({ onAddToOrder }) {
   const [items, setItems] = useState(menuItems)
   const [isLoading, setIsLoading] = useState(true)
 
@@ -38,7 +38,7 @@ function Specialities() {
           description="Recipes passed down, ingredients chosen with care, and a little extra love in every serving."
         />
         <div className="menu-grid" aria-busy={isLoading}>
-          {items.map((item) => <MenuCard key={item._id || item.englishName} item={item} />)}
+          {items.map((item) => <MenuCard key={item._id || item.englishName} item={item} onAddToOrder={onAddToOrder} />)}
         </div>
         <a className="menu-link" href="#contact">View the full menu <span aria-hidden="true">↗</span></a>
       </div>
