@@ -35,6 +35,24 @@ const menuItems = [
     image: 'https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=900&q=85',
     bestseller: false,
   },
+  {
+    name: 'साबुदाणा वडा',
+    englishName: 'Sabudana Vada',
+    description: 'Crisp tapioca and peanut fritters with cool coconut chutney.',
+    price: 130,
+    category: 'Crispy snack',
+    image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=85',
+    bestseller: false,
+  },
+  {
+    name: 'थालीपीठ',
+    englishName: 'Thalipeeth',
+    description: 'A rustic multigrain flatbread served with homemade white butter.',
+    price: 150,
+    category: 'Traditional special',
+    image: 'https://images.unsplash.com/photo-1617692855027-33b14f061079?auto=format&fit=crop&w=900&q=85',
+    bestseller: true,
+  },
 ]
 
 export default menuItems

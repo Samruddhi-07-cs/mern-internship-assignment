@@ -2,6 +2,12 @@ import { useEffect, useState } from 'react'
 import { getMenuItems } from '../data/api.js'
 import menuItems from '../data/menuData.js'
 import MenuCard from './MenuCard.jsx'
+import SectionHeading from './SectionHeading.jsx'
+import DecorativeFoodImages from './DecorativeFoodImages.jsx'
+
+const specialityFoodImages = [
+  { image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=400&q=70', position: 'food-section-right', size: '130px', shape: 'food-circle', opacity: .1, rotation: 12 },
+]
 
 function Specialities() {
   const [items, setItems] = useState(menuItems)
@@ -23,14 +29,14 @@ function Specialities() {
 
   return (
     <section className="specialities" id="menu">
+      <DecorativeFoodImages images={specialityFoodImages} />
       <div className="container">
-        <div className="section-heading">
-          <div>
-            <p className="eyebrow section-eyebrow"><span /> आमच्या खासियत</p>
-            <h2>थाळीतली <em>आपुलकी.</em></h2>
-          </div>
-          <p className="section-intro">Recipes passed down, ingredients chosen with care, and a little extra love in every serving.</p>
-        </div>
+        <SectionHeading
+          eyebrow="आमच्या खासियत"
+          title="थाळीतली"
+          highlight="आपुलकी."
+          description="Recipes passed down, ingredients chosen with care, and a little extra love in every serving."
+        />
         <div className="menu-grid" aria-busy={isLoading}>
           {items.map((item) => <MenuCard key={item._id || item.englishName} item={item} />)}
         </div>

@@ -46,7 +46,7 @@ function Navbar() {
         <div id="site-menu" className={`nav-menu${isOpen ? ' is-open' : ''}`}>
           <div className="nav-links">
             {links.map((link) => (
-              <a key={link.href} href={link.href} onClick={closeMenu}>{link.label}</a>
+              <a className={link.href === '#home' ? 'is-active' : ''} key={link.href} href={link.href} onClick={closeMenu} aria-current={link.href === '#home' ? 'page' : undefined}>{link.label}</a>
             ))}
           </div>
           <a className="nav-order" href="https://wa.me/919876543210" target="_blank" rel="noreferrer" onClick={closeMenu}>
