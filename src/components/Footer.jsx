@@ -1,6 +1,9 @@
+import IllustratedBackdrop from './IllustratedBackdrop.jsx'
+
 function Footer() {
   return (
     <footer className="site-footer">
+      <IllustratedBackdrop variant="footer" asset="utensils" />
       <div className="container footer-grid">
         <div className="footer-brand"><a className="brand" href="#home"><span className="brand-mark" aria-hidden="true">अ</span><span className="brand-copy"><strong>आपलं स्वाद</strong><small>Aapla Swaad</small></span></a><p>Traditional Maharashtrian food,<br />made with a little more heart.</p></div>
         <div className="footer-column"><strong>Explore</strong><a href="#menu">Menu</a><a href="#story">Our story</a><a href="#gallery">Gallery</a></div>

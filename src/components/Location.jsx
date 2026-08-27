@@ -1,4 +1,5 @@
 import DecorativeFoodImages from './DecorativeFoodImages.jsx'
+import IllustratedBackdrop from './IllustratedBackdrop.jsx'
 
 const locationFoodImages = [
   { image: 'https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=400&q=70', position: 'food-location-edge', size: '125px', shape: 'food-arch', opacity: .1, rotation: -16 },
@@ -7,6 +8,7 @@ const locationFoodImages = [
 function Location() {
   return (
     <section className="location" id="location">
+      <IllustratedBackdrop variant="location" asset="utensils" />
       <DecorativeFoodImages images={locationFoodImages} />
       <div className="container location-grid">
         <div className="location-copy">

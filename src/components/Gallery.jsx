@@ -1,8 +1,10 @@
 import galleryImages from '../data/galleryData.js'
+import IllustratedBackdrop from './IllustratedBackdrop.jsx'
 
 function Gallery() {
   return (
     <section className="gallery" id="gallery">
+      <IllustratedBackdrop variant="gallery" asset="thali" />
       <div className="container">
         <div className="gallery-heading">
           <div>

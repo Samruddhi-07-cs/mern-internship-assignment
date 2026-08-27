@@ -1,5 +1,6 @@
 import FeatureCard from './FeatureCard.jsx'
 import DecorativeFoodImages from './DecorativeFoodImages.jsx'
+import IllustratedBackdrop from './IllustratedBackdrop.jsx'
 
 const whyFoodImages = [
   { image: 'https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=400&q=70', position: 'food-section-corner', size: '145px', shape: 'food-soft', opacity: .1, rotation: -14 },
@@ -15,6 +16,7 @@ const features = [
 function WhyChooseUs() {
   return (
     <section className="why-us" id="story">
+      <IllustratedBackdrop variant="story" asset="leaves" />
       <DecorativeFoodImages images={whyFoodImages} />
       <div className="container">
         <div className="why-intro">

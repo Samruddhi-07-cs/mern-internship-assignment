@@ -30,6 +30,13 @@ button:active, a.button:active, .nav-order:active { transform: translateY(1px) s
 .reveal.is-visible { opacity: 1; transform: translateY(0); }
 
 .container { width: min(100% - 3rem, 1180px); margin-inline: auto; }
+.illustrated-backdrop { position: absolute; z-index: 0; inset: 0; pointer-events: none; background-position: center; background-repeat: no-repeat; background-size: min(1200px, 100%); opacity: .075; filter: sepia(.28); }
+.illustrated-backdrop-menu { background-position: center bottom; opacity: .065; }
+.illustrated-backdrop-story { opacity: .05; filter: sepia(.35) brightness(.72); }
+.illustrated-backdrop-reviews { background-position: center 35%; opacity: .055; }
+.illustrated-backdrop-location { background-position: center bottom; opacity: .065; }
+.illustrated-backdrop-contact { background-position: center; opacity: .06; }
+.specialities > .container, .reviews > .container, .contact > .container { position: relative; z-index: 1; }
 .decorative-food { position: absolute; z-index: 0; inset: 0; overflow: hidden; pointer-events: none; }
 .decorative-food-image { position: absolute; display: block; width: var(--food-size); height: var(--food-size); opacity: var(--food-opacity); filter: saturate(.72) brightness(.62) contrast(.9); object-fit: cover; transform: rotate(var(--food-rotation)); mix-blend-mode: screen; }
 .food-circle { border-radius: 50%; }

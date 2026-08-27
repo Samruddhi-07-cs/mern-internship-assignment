@@ -3,6 +3,7 @@ import { getReviews } from '../data/api.js'
 import reviews from '../data/reviewsData.js'
 import ReviewCard from './ReviewCard.jsx'
 import DecorativeFoodImages from './DecorativeFoodImages.jsx'
+import IllustratedBackdrop from './IllustratedBackdrop.jsx'
 
 const reviewFoodImages = [
   { image: 'https://images.unsplash.com/photo-1617692855027-33b14f061079?auto=format&fit=crop&w=400&q=70', position: 'food-review-corner', size: '155px', shape: 'food-circle', opacity: .07, rotation: 18 },
@@ -24,6 +25,7 @@ function Reviews() {
 
   return (
     <section className="reviews" id="reviews">
+      <IllustratedBackdrop variant="reviews" asset="people" />
       <DecorativeFoodImages images={reviewFoodImages} />
       <div className="container">
         <div className="section-heading reviews-heading">

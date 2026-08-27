@@ -4,6 +4,7 @@ import menuItems from '../data/menuData.js'
 import MenuCard from './MenuCard.jsx'
 import SectionHeading from './SectionHeading.jsx'
 import DecorativeFoodImages from './DecorativeFoodImages.jsx'
+import IllustratedBackdrop from './IllustratedBackdrop.jsx'
 
 const specialityFoodImages = [
   { image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=400&q=70', position: 'food-section-right', size: '130px', shape: 'food-circle', opacity: .1, rotation: 12 },
@@ -29,6 +30,7 @@ function Specialities({ onAddToOrder }) {
 
   return (
     <section className="specialities" id="menu">
+      <IllustratedBackdrop variant="menu" asset="thali" />
       <DecorativeFoodImages images={specialityFoodImages} />
       <div className="container">
         <SectionHeading

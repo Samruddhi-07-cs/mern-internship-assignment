@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { sendContactMessage } from '../data/api.js'
+import IllustratedBackdrop from './IllustratedBackdrop.jsx'
 
 const contactLinks = [
   { label: 'Call us', value: '+91 98765 43210', href: 'tel:+919876543210', icon: '◉' },
@@ -34,6 +35,7 @@ function Contact() {
 
   return (
     <section className="contact" id="contact">
+      <IllustratedBackdrop variant="contact" asset="leaves" />
       <div className="container">
         <div className="contact-heading"><p className="eyebrow section-eyebrow"><span /> बोलूया</p><h2>चव आली? <em>संपर्क करा.</em></h2></div>
         <div className="contact-grid">
